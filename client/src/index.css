@@ -1,1 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
+
+/* ==========================
+   EveryGen Market Design System
+========================== */
+
+:root {
+  --color-primary: #10b981;
+  --color-primary-hover: #059669;
+
+  --color-secondary: #334155;
+
+  --color-accent: #0ea5e9;
+
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+
+  --color-border: #e2e8f0;
+
+  --color-heading: #0f172a;
+  --color-text: #475569;
+
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
