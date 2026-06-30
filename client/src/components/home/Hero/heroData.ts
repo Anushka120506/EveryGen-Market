@@ -1,23 +1,32 @@
+export const heroFeatures = [
+  {
+    id: 1,
+    title: "AI Powered",
+  },
+  {
+    id: 2,
+    title: "Voice Search",
+  },
+  {
+    id: 3,
+    title: "Senior Friendly",
+  },
+];
+
 export const heroStats = [
   {
     id: 1,
-    value: "10K+",
+    number: "10K+",
     label: "Happy Customers",
   },
   {
     id: 2,
-    value: "500+",
+    number: "500+",
     label: "Trusted Brands",
   },
   {
     id: 3,
-    value: "99%",
+    number: "99%",
     label: "Customer Satisfaction",
   },
-];
-
-export const heroFeatures = [
-  "AI Powered Shopping",
-  "Accessibility First",
-  "Voice Search Ready",
 ];
