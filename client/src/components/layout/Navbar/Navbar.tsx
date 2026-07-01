@@ -9,8 +9,16 @@ import {
 import Container from "../Container/Container";
 import Logo from "../Logo/Logo";
 import Button from "../../common/Button/Button";
+import { useCart } from "../../../context/CartContext";
 
 const Navbar = () => {
+  const { cart } = useCart();
+
+  const totalItems = cart.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
       <Container>
@@ -66,14 +74,14 @@ const Navbar = () => {
               <FiUser size={22} />
             </button>
 
-            <button className="relative">
+            <Link to="/cart" className="relative">
               <FiShoppingCart size={22} />
 
-              <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-600 text-xs text-white">
-                0
+              <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">
+                {totalItems}
               </span>
 
-            </button>
+            </Link>
 
             <div className="hidden lg:block">
               <Button>Login</Button>
