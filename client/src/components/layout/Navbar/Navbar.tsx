@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   FiShoppingCart,
   FiSearch,
@@ -15,34 +16,40 @@ const Navbar = () => {
       <Container>
         <div className="flex h-20 items-center justify-between">
 
-          {/* Logo */}
           <Logo />
 
-          {/* Navigation */}
           <nav className="hidden items-center gap-8 lg:flex">
-            <a href="/" className="font-medium hover:text-emerald-600">
+
+            <Link
+              to="/"
+              className="font-medium hover:text-emerald-600"
+            >
               Home
-            </a>
+            </Link>
 
-            <a href="/" className="font-medium hover:text-emerald-600">
+            <Link
+              to="/shop"
+              className="font-medium hover:text-emerald-600"
+            >
               Shop
-            </a>
+            </Link>
 
-            <a href="/" className="font-medium hover:text-emerald-600">
+            <a href="#" className="font-medium hover:text-emerald-600">
               Categories
             </a>
 
-            <a href="/" className="font-medium hover:text-emerald-600">
+            <a href="#" className="font-medium hover:text-emerald-600">
               About
             </a>
 
-            <a href="/" className="font-medium hover:text-emerald-600">
+            <a href="#" className="font-medium hover:text-emerald-600">
               Contact
             </a>
+
           </nav>
 
-          {/* Search */}
           <div className="hidden w-72 items-center rounded-xl border border-slate-200 px-3 py-2 lg:flex">
+
             <FiSearch className="mr-2 text-slate-500" />
 
             <input
@@ -50,9 +57,9 @@ const Navbar = () => {
               placeholder="Search products..."
               className="w-full bg-transparent outline-none"
             />
+
           </div>
 
-          {/* Right Side */}
           <div className="flex items-center gap-4">
 
             <button className="hidden lg:block">
@@ -65,6 +72,7 @@ const Navbar = () => {
               <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-600 text-xs text-white">
                 0
               </span>
+
             </button>
 
             <div className="hidden lg:block">
@@ -76,6 +84,7 @@ const Navbar = () => {
             </button>
 
           </div>
+
         </div>
       </Container>
     </header>

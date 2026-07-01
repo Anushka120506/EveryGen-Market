@@ -1,11 +1,17 @@
 import Navbar from "./components/layout/Navbar/Navbar";
-import Shop from "./components/shop/Shop";
+import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/ShopPage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Shop />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+      </Routes>
     </>
   );
 }
